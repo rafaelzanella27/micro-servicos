@@ -23,11 +23,11 @@ ADD ./target/hr-config-server-0.0.1-SNAPSHOT.jar hr-config-server.jar
 ENTRYPOINT ["java","-jar","/hr-config-server.jar"]
 ``` 
 ```
-mvnw clean package
+mvnw clean package ou .\mvnw clean package (No Windows)
 
 docker build -t hr-config-server:v1 .
 
-docker run -p 8888:8888 --name hr-config-server --network hr-net -e GITHUB_USER=acenelio -e GITHUB_PASS= hr-config-server:v1
+docker run -p 8888:8888 --name hr-config-server --network hr-net -e GITHUB_USER=seu_login -e GITHUB_PASS=seu_token_github hr-config-server:v1
 ```
 
 ## hr-eureka-server
